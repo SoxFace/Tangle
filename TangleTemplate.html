@@ -23,11 +23,11 @@
 
 			var tangle = new Tangle(element, {
 				initialize: function () {
-					this.cookies = 4;
-					this.caloriesPerCookie = 50;
+					this.cookies = 1;
+					this.caloriesPerCookie = 100;
 				},
 				update: function () {
-					this.calories = this.cookies * this.caloriesPerCookie;
+					this.calories = Math.round(this.caloriesPerCookie / this.cookies);
 				}
 			});
 		}
@@ -40,8 +40,7 @@
 	<p>This is a simple reactive document.</p>
 
 	<p id="example">
-		When you eat <span data-var="cookies" class="TKAdjustableNumber" data-min="2" data-max="100"> cookies</span>, you
-		will consume <span data-var="calories"></span> calories.
+		When you do <span data-var="cookies" class="TKAdjustableNumber" data-min="2" data-max="100">% of work</span> before class, you will have to do <span data-var="calories"></span> hours of revision for the exams.
 	</p>
 
 </body>
